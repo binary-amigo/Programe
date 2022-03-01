@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float basic,percentageAllow,percentageDeduc,netsalary;
+    cout<<"Enter basic salary ";
+    cin>>basic;
+    cout<<"Enter percentage allowance ";
+    cin>>percentageAllow;
+    cout<<"Enter percentage deduction ";
+    cin>>percentageDeduc;
+    netsalary=basic+basic*percentageAllow/100-basic*percentageDeduc/100;
+    cout<<"Net Salary is "<<netsalary;
+    return 0;
+}
