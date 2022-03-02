@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+int
+main ()
+{
+  int month;
+  cout << "Enter month number";
+  cin >> month;
+  if (month == 1)
+    {
+      cout << "JAN" << endl;
+    }
+  else if (month == 2)
+    {
+      cout << "FEB" << endl;
+    }
+  else if (month == 3)
+    {
+      cout << "MAR" << endl;
+    }
+  else if (month == 4)
+    {
+      cout << "APR" << endl;
+    }
+  else if (month == 5)
+    {
+      cout << "MAY" << endl;
+    }
+  else if (month == 6)
+    {
+      cout << "JUN" << endl;
+    }
+  else if (month == 7)
+    {
+      cout << "JULY" << endl;
+    }
+  else if(month==8)
+    {
+      cout << "AUGUST" << endl;
+    }
+    else if(month==9)
+    {
+        cout<<"SEP"<<endl;
+    }
+    else if(month==10)
+    {
+        cout<<"OCT"<<endl;
+    }
+    else if(month==11)
+    {
+        cout<<"NOV"<<endl;
+    }
+    else if(month==12)
+    {
+        cout<<"DEC"<<endl;
+    }
+    else
+    {
+        cout<<"Invalid month"<<endl;
+    }
+  return 0;
+}
