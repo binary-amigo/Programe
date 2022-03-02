@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float d,b,c,a;
+    cout<<"Enter coefficient of x^2 ";
+    cin>>a;
+    cout<<"Enter coefficient of x ";
+    cin>>b;
+    cout<<"Enter constant ";
+    cin>>c;
+    d=(b*b) - (4*a*c);
+    if(d=0)
+    {
+        cout<<"roots are real & equal"<<endl;
+    }
+    else
+    {
+        if(d>0)
+        {
+            cout<<"roots are real and unequal"<<endl;
+        }
+        else
+        {
+            cout<<"roots are imaginary"<<endl;
+        }
+    }
+    return 0;
+}
