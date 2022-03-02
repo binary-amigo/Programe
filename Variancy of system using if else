@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int F,C,P;
+    cout<<"Phases can be liquid,gas or solid"<<endl;
+    cout<<"Components are the no. of constituents in the mixture"<<endl;
+    cout<<"Enter no. of components and no. of phase"<<endl;
+    cin>>C>>P;
+    F=C - P + 2;
+    if (F==0)
+    {
+        cout<<"Since degree of freedom is 0 hence it is an invariant system.";
+    }
+    else if(F==1)
+    {
+        cout<<"Since degree of freedom is 1 hence it is a univariant system.";
+    }
+    else if (F==2)
+    {
+        cout<<"Since degree of freedom is 2 hence it is a bivariant system.";
+    }
+    else
+    {
+        cout<<"Invalid Input";
+    }
+    return 0;
+}
