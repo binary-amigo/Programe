@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main()
+//if bill amount < 100 no dicount
+//if bill amount >=100 and <500 then 10% discount
+//if bill amount is >=500 then 20% discount
+{
+    int billamount;
+    float disamount;
+    cout<<"Enter bill amount";
+    cin>>billamount;
+    if (billamount<100)
+    {
+        cout<<"No discount";
+    }
+    else if(billamount>=100 && billamount<500)
+    {
+        cout<<"Bill amount is "<<billamount<<endl;
+        disamount=(float)10/100*billamount;
+        cout<<"Discounted amount is "<<disamount<<endl;
+        cout<<"Payable amount is "<<billamount - disamount<<endl;
+        
+    }
+    else
+    {
+        disamount=(float)20/100*billamount;
+        cout<<"Bill amount is "<<billamount<<endl;
+        cout<<"Discounted amount is "<<disamount<<endl;
+        cout<<"Payable amount is "<<billamount-disamount<<endl;
+    }
+}
