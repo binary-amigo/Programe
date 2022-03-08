@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n=1,r=1,sum=0;
+    while(n<=500)
+    {
+        while(r<=n)
+        {
+           if(n%r==0)
+           {
+              sum+=r;
+              
+           }
+           r++;
+        }
+        if(sum==2*n) cout<<n<<endl;
+        n++;
+        r=1;
+        sum=0;
+    }
+    
+}
