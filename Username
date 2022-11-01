@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string id;
+    cout<<"Enter ID: ";
+    cin>>id;
+    int f=id.find("@");
+    cout<<id.substr(0,f);
+    return 0;
+}
