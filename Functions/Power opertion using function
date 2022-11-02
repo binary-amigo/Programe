@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int pow(int x,int y)
+{
+    int p=x;
+    for(int m=1;m<y;m++)
+    {
+        p=p*x;
+    }
+    return p;
+}
+
+void Main()
+{
+    cout<<pow(2,5);
+}
+
