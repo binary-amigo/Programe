@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+class Rectangle
+{
+    int length;
+    int breadth;
+    public:
+        Rectangle();//default constructor
+        Rectangle(int l,int b);//parametrised constructor
+        Rectangle (Rectangle &rect);//copy constructor
+        ~Rectangle();//Destructor
+        void setLength(int l);//mutator
+        void setBreadth(int b);//mutator
+        int getlength()//accessor
+        {
+            return length;
+        }
+        int getbreadth()//accessor
+        {
+            return breadth;
+        }
+        int area();//facilitator
+        int perimeter();//facilitator
+        int isSquare()//Inspector or enquiry
+        {
+            if(length==breadth)
+            cout<<"is Square"<<endl;
+            else
+            cout<<"not square"<<endl;
+            return 0;
+        }
+};
+Rectangle::Rectangle()
+{
+    length=1;
+    breadth=1;
+}
+Rectangle::Rectangle(int l,int b)
+{
+            setLength(l);
+            setBreadth(b);
+        }
+Rectangle::Rectangle(Rectangle &rect)
+{
+            length=rect.length;
+            breadth=rect.breadth;
+        }
+void Rectangle::setLength(int l)
+{
+            if(l>=0)
+            {   
+                length=l;
+            }
+            else
+            length=0;
+        }
+void Rectangle::setBreadth(int b)
+ {
+            if(b>=0)
+            {
+                breadth=b;
+            }
+            else
+            breadth=0;
+        }
+int Rectangle::area()
+{
+            return length*breadth;
+        }
+int Rectangle::perimeter()
+{
+            return 2*(length+breadth);
+        }
+Rectangle::~Rectangle()
+{
+    cout<<"Rectangle destroyed"<<endl;
+}
+        
+int main()
+{
+    Rectangle r;
+    cout<<r.area()<<" "<<r.perimeter()<<endl;
+    Rectangle r1(10,5);
+    cout<<r1.area()<<" "<<r1.perimeter()<<endl;
+    Rectangle r2(r1);
+    cout<<r2.area()<<" "<<r2.perimeter()<<endl;
+    r.isSquare();
+    r1.isSquare();
+    r2.isSquare();
+    return 0;
+}
+        
