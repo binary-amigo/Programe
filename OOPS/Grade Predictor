@@ -1,0 +1,48 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+class student
+{
+    int rollno;
+    string name;
+    int maths,physics,chemistry;
+    public:
+    student(int r,string n,int m,int p,int c)
+    {
+        rollno=r;
+        name=n;
+        maths=m;
+        physics=p;
+        chemistry=c;
+    }
+    int total(int m,int p,int c)
+    {
+        return (m+p+c);
+    }
+    char grade(int m,int p,int c)
+    {
+        int avg=(m+p+c)/3;
+        if(avg<=40)
+        return 'C';
+        else if(avg>40 && avg<60)
+        return 'B';
+        else
+        return 'A';
+    }
+};
+int main()
+{
+    int roll;
+    string name;
+    int g,b,r;
+    cout<<"Enter student name: ";
+    cin>>name;
+    cout<<"Enter your roll no: ";
+    cin>>roll;
+    cout<<"Enter maths,physics,chemistry marks: ";
+    cin>>g>>b>>r;
+    student s(roll,name,g,b,r);
+    cout<<"Total marks: "<<s.total(g,b,r)<<endl;
+    cout<<"Grade is: "<<s.grade(g,b,r)<<endl;
+    return 0;
+}
