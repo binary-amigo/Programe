@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class Complex
+{
+    int p;
+    int q;
+    public:
+    Complex()
+    {
+        p=0;
+        q=0;
+    }
+    Complex(int x,int y)
+    {
+        p=x;
+        q=y;
+    }
+    friend Complex operator + (Complex ,Complex );
+    friend ostream & operator << (ostream &O, Complex &y);
+    void show()
+    {
+        
+    }
+};
+Complex operator + (Complex a,Complex b)
+{
+    Complex t;
+    t.p=(a.p*b.q)+(b.p*a.q);
+    t.q=a.q*b.q;
+    return t;
+}
+ostream & operator << (ostream &O, Complex &y)
+{
+    cout<<y.p<<"/"<<y.q;
+    return O;
+}
+int main()
+{
+    Complex c1(3,5),c2(6,7),c3;
+    c3=c1+c2;
+    cout<<"Sum of "<<c1<<" & "<<c2<<" is "<<c3;
+    return 0;
+}
