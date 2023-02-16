@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+class car
+{
+       public:
+       virtual void start()
+       {
+              cout<<"Car started";
+       }
+       
+       virtual void stop()
+       {
+              cout<<"Car stopped";
+       }
+       // Both the above functions have no purpose because they are overrided so we only need their name
+       //make the pure virtual
+       //virtual void start()=0;
+       //virtual void stop()=0;
+       //Any class having pure virtual function is called abstract class.
+       //Object of abstract class can not be created.
+       //Pointer of abstract class can be created
+};
+class Innova:public car
+{
+       public:
+       void start()
+       {
+              cout<<"Innova started";
+       }
+       void stop()
+       {
+              cout<<"Innova stopped";
+       }
+};
+class Swift:public car
+{
+       public:
+       void start()
+       {
+              cout<<"Swift started";
+       }
+       void stop()
+       {
+              cout<<"Swift stopped";
+       }
+};
+int main()
+{
+       car *c=new Innova();
+       c->start();
+       c->stop();
+       c=new Swift();
+       c->start();
+       c->stop();
+       return 0;
+}
